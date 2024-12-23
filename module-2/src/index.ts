@@ -16,11 +16,11 @@ const player: [string, boolean] = ["malinga", true]
 
 // object types
 const user : {
-  readonly company: string,
-  name: string,
+  readonly company: string, //readonly
+  name: "sarika", // literal types
   age: number,
   isTechLead: boolean,
-  wife?: string,
+  wife?: string, // optional chaining
 } = {
   company: "barikoi",
   name: "sarika",
