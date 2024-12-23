@@ -11,5 +11,20 @@ const primitiveTypes: string[] = ["bigint", "boolean", "string"]
 const rollNumbers:number[] = [2,3,4,5]
 
 // tuple types
-const user: [number, string] = [4, "sarika"]
+const person: [number, string] = [4, "sarika"]
 const player: [string, boolean] = ["malinga", true]
+
+// object types
+const user : {
+  readonly company: string,
+  name: string,
+  age: number,
+  isTechLead: boolean,
+  wife?: string,
+} = {
+  company: "barikoi",
+  name: "sarika",
+  age: 52,
+  isTechLead: false,
+  wife: "sarika"
+}
