@@ -1,14 +1,16 @@
 // normal function
-function add(num1: number, num2: number):number {
+function add(num1: number, num2: number = 10):number {
   return num1 + num2;
 }
+
+const r = add(2);
+console.log({r})
 
 const addArrow = (num1: number, num2: number):number => num1 + num2
 
 const arr = [1,4,5]
 const newArray = arr.map(elem=> elem*elem)
 
-add(2,2)
 
 const persons: {
   name: string,
@@ -34,4 +36,28 @@ const users: {
   }
 }
 
+//spread operator
 
+const myFriends = ["chandler", "parth", "john"]
+const newFriends = ["messi", "neymar", "bappe"]
+const result = myFriends.push(...newFriends)
+console.log({ result, myFriends });
+
+// rest operator
+
+const greetFriends = (...friends: string[]): void => {
+  friends.forEach(element => {
+     console.log(`Hi ${element}`);
+  });
+ 
+}
+greetFriends("andres", "leo", "messi")
+
+// destructuring
+const love = {
+  playerName: "messi",
+  number: 10
+}
+
+const { playerName, number } = love;
+console.log({ playerName, number });
